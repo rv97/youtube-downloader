@@ -34,6 +34,9 @@ def onGetDirectoryButtonPressed():
 
 def onDownloadPressed():
     video.streams.get_by_resolution(combo_var.get()).download(output_path=SAVING_DIRECTORY+"/")
+    messagebox.showinfo("Video Downloaded", "You video has been downloaded to "+SAVING_DIRECTORY)
+    exit()
+
 
 url_label = Label(window, text="URL")
 url_label.grid(row=0, column=0)
